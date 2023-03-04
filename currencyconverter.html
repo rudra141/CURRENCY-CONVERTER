@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>CURRENCY CONVERTER</title>
+	
+	
+</head>
+<style>
+	body {
+		background: black;
+	}
+
+	h1 {
+		background: aquamarine;
+		text-align: center;
+		font-size: 40px;
+		padding: 20px;
+		font-weight: bold;
+		margin-left: 35%;
+		margin-right: 35%;
+		cursor: pointer;
+		font-family: 'Times New Roman';
+	}
+
+	marquee {
+		background: red;
+		text-align: center;
+		font-size: 40px;
+		padding: 20px;
+		font-weight: bold;
+		margin-left: 35%;
+		margin-right: 35%;
+		cursor: pointer;
+
+	}
+
+	fieldset {
+		width: 45%;
+		margin: auto;
+		border: 1px solid antiquewhite;
+		text-align: left;
+		font-size: 20px;
+		font-family: lato, sans-serif;
+	}
+
+	input[type=number],
+	[id] {
+		background: antiquewhite;
+		text-align: center;
+		border: 1px solid greenyellow;
+		border-radius: 2px;
+		border-width: 1px;
+		color: gray;
+		font-size: 15px;
+		margin: 5px;
+		padding: 12px;
+		cursor: pointer;
+		display: inline-block;
+
+	}
+
+	input[type=reset] {
+		width: 93px;
+		height: 45px;
+		font-weight: bold;
+	}
+
+	input[type=button] {
+		width: 80px;
+		height: 45px;
+		font-weight: bold;
+	}
+</style>
+<script>
+	function currencyConverter(valNum) {
+		if(converter.rupees.value <= 0)
+			window.alert("Enter The Value Greaterthan  0");
+		else {
+			document.getElementById("dollar").value=(valNum/81.00).toFixed(2);
+			document.getElementById("yuan").value=(valNum/12.00).toFixed(2);
+			document.getElementById("dinar").value=(valNum/266.00).toFixed(2);
+			document.getElementById("euro").value=(valNum/87.00).toFixed(2);
+			document.getElementById("pound").value=(valNum/98.50).toFixed(2);
+			document.getElementById("riyal").value=(valNum/21.75).toFixed(2);
+
+		 }
+
+	}
+</script>
+<body>
+	<h1>CURRENCY CONVERTER</h1>
+	<marquee>Welcome To The Online Currency Converter</marquee>
+	<br><br>
+	<form name="converter">
+		<fieldset>
+
+
+
+			<label style="color:antiquewhite">Rupees:</label>
+			<input type="number" name="rupees" required>
+			<input type="button" value="Convert" onclick="currencyConverter(converter.rupees.value)"><br><br>
+			
+			
+
+			<label style="color:antiquewhite">Dollar <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a4/Flag_of_the_United_States.svg/220px-Flag_of_the_United_States.svg.png" alt="USA Flag" width="28" height="18">:</label>
+		
+			<input id="dollar"><br>
+
+			<label style="color:antiquewhite">Yuan <img src="https://upload.wikimedia.org/wikipedia/commons/f/fa/Flag_of_the_People%27s_Republic_of_China.svg" alt="China flag" width="28" height="18">:</label>
+			
+			<input id="yuan"><br>
+
+			<label img src="" style="color:antiquewhite">Dinar <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/aa/Flag_of_Kuwait.svg/1200px-Flag_of_Kuwait.svg.png" alt="Kuwait Flag" width="30px" >:</label>
+			
+			<input id="dinar"><br>
+
+			<label style="color:antiquewhite">Euro <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b7/Flag_of_Europe.svg/440px-Flag_of_Europe.svg.png" alt="EU flag" height="20" width="30">:</label>
+			&nbsp 
+			<input id="euro"><br>
+
+			<label style="color:antiquewhite">Pound <img src="https://upload.wikimedia.org/wikipedia/en/a/ae/Flag_of_the_United_Kingdom.svg" alt="UK flag"  width="28" height="18">:</label>
+			
+			<input id="pound"><br>
+
+			<label style="color:antiquewhite">Riyal <img src="https://upload.wikimedia.org/wikipedia/commons/0/0d/Flag_of_Saudi_Arabia.svg" alt="Saudi Arabian flag" width="28" height="18">:</label>
+			&nbsp
+			<input id="riyal"><br>
+			<center><input type="reset" value="Reset Form"><br></center>
+			<center><p>Press Reset for Reseting the Form</p></center>
+		</fieldset>
+	</form>
+</body>
+
+</html>
